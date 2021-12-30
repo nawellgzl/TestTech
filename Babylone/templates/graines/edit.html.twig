@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Graines{% endblock %}
+
+{% block body %}
+    <h1>Edit Graines</h1>
+
+    {{ include('graines/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('graines_index') }}">back to list</a>
+
+    {{ include('graines/_delete_form.html.twig') }}
+{% endblock %}

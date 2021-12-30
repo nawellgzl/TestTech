@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Graines index{% endblock %}
+
+{% block body %}
+    <h1>Graines index</h1>
+
+    <div id="CSV">
+        <button><a style="color:black;" href="{{ path('graines_index') }}">Generer CSV</a></button>
+    </div>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nom_graine</th>
+                <th>Famille</th>
+                <th>Plantation</th>
+                <th>Recolte</th>
+                <th>Visuel</th>
+                
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody class="thead-light">
+        {% for graine in graines %}
+            <tr>
+                <td>{{ graine.id }}</td>
+                <td>{{ graine.nomGraine }}</td>
+                <td>{{ graine.famille }}</td>
+                <td>{{ graine.plantation }}</td>
+                <td>{{ graine.recolte }}</td>
+                <td><img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+                
+                <td>
+                    <a href="{{ path('graines_show', {'id': graine.id}) }}">show</a>
+                    <a href="{{ path('graines_edit', {'id': graine.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <button><a href="{{ path('graines_new') }}">Create new</a></button>
+{% endblock %}

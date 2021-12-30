@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Graines{% endblock %}
+
+{% block body %}
+  
+
+        {% if graine is defined %}
+        <div id="bouttonRetour">
+                        <button><a style="color:black;" href="{{ path('graines_index') }}">back to list</a></button>
+                        <button><a style="color:black;" href="{{ path('graines_edit', {'id': graine.id}) }}">edit</a></button>
+                        
+                </div>
+                        <div id="imgDetail"><img id="imgDetailimg" src="{{ asset(graine.visuel) }}"/></div>
+                                <br><br>
+                                <h1 id="productname">{{ graine.nomGraine }}<h1>
+                                {{ include('graines/_delete_form.html.twig') }}
+                                <br>
+
+                                <p class="description" > Période de plantation: {{ graine.plantation }} </p>
+                                <p class="description"> Période de récolte: {{ graine.recolte }} </p>
+                                <p class="description" > Stock : {{ graine.stock }}.</p>
+                                <br>
+                                <p class="description"> {{ graine.conseils }} <p>
+                        </div>
+        {% else %}
+            Out of Stock
+        {% endif %}
+
+{% endblock %}

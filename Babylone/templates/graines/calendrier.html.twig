@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calendrier{% endblock %}
+
+{% block body %}
+<div id="CSV">
+        <button id="CSVbtn"><a href="{{ path('graines_index') }}">Generer CSV</a></button>
+    </div>
+    <h1>Calendrier de Plantation </h1>
+
+    
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Printemps</th>
+                <th>Eté</th>
+                <th>Automne</th>
+                <th>Hiver</th>
+                
+            </tr>
+        </thead>
+        <tbody class="thead-light">
+        {% for graine in graines %}
+            <tr>
+                {% if graine.plantation == "printemps" %}
+                <td>{{ graine.nomGraine }}<img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+               {% else %}
+                <td></td>
+             {% endif %}
+                {% if graine.plantation == "ete" %}
+                <td>{{ graine.nomGraine }}<img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+              {% else %}
+                <td></td>
+             {% endif %}
+                {% if graine.plantation == "automne" %}
+                <td>{{ graine.nomGraine }}<img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+                {% else %}
+                <td></td>
+             {% endif %}
+                {% if graine.plantation == "hiver" %}
+                <td>{{ graine.nomGraine }}<img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+                {% else %}
+                <td></td>
+             {% endif %}
+              
+            {% else %}
+        <tr>
+            <td colspan="9">no records found</td>
+        </tr>
+    {% endfor %}
+     </tbody>
+    </table>
+            
+                <br>
+                 <h1>Calendrier de Récolte </h1>
+    <br>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Printemps</th>
+                <th>Eté</th>
+                <th>Automne</th>
+                <th>Hiver</th>
+                
+            </tr>
+        </thead>
+        <tbody class="thead-light">
+       
+        {% for graine in graines %}
+            <tr>
+             
+                {% if graine.recolte == "printemps" %}
+                <td>{{ graine.nomGraine }}<img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+             {% else %}
+                <td></td>
+             {% endif %}
+                {% if graine.recolte == "ete" %}
+                <td>{{ graine.nomGraine }}<img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+                {% else %}
+                <td></td>
+               {% endif %}
+                {% if graine.recolte == "automne" %}
+                <td>{{ graine.nomGraine }}<img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                {% if graine.recolte == "hiver" %}
+                <td>{{ graine.nomGraine }}<img id="imgVisuel" src="{{ asset(graine.visuel) }}"/></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+                
+         
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
