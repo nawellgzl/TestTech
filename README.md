@@ -16,3 +16,11 @@ ce qui n'a pas d'incidence dans ce cas car elle ne
 comporte pas beaucoup de duplication et qu'elle est normalisée.
 
 PS: Pour l'envoi, j'ai du supprimer le dossier vendor de Symfony.
+
+<div align="center">
+  <img src="/Img_Interface/indexGraine.png" width="400px"</img> 
+  <img src="/Img_Interface/detailGraine.png" width="400px"</img>
+  <img src="/Img_Interface/ajout.png" width="400px"</img>
+  <img src="/Img_Interface/edition.png" width="400px"</img>
+  <img src="/Img_Interface/calendrier.png" width="400px"</img>
+</div>
