@@ -13,7 +13,7 @@ Pour ce test technique j'ai choisi d'utiliser Symfony avec son modele MVC.
 J'avais conçu au depart un MCD contenant plusieurs relations et entités,
 mais en raison du temps imparti par le test, j'ai été contrainte de reduire à une seule table
 ce qui n'a pas d'incidence dans ce cas car elle ne 
-comporte pas beaucoup de duplication et qu'elle est normalisée.
+comporte pas de duplication et qu'elle est normalisée.
 
 PS: Pour l'envoi, j'ai du supprimer le dossier vendor de Symfony.
 
