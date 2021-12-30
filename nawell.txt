@@ -1,12 +1,10 @@
-Bonjour,
-
-Pour ce test j'ai choisi d'utiliser Symfony avec son modele MVC.
+Pour ce test technique j'ai choisi d'utiliser Symfony avec son modele MVC.
 
 
-J'avais conçu au depart un MCD contenant plusieurs relations et entités,
-mais en raison du temps imparti par le test, j'ai été contrainte de reduire à une seule table
+J'avais conÃ§u au depart un MCD contenant plusieurs relations et entitÃ©s,
+mais en raison du temps imparti par le test, j'ai Ã©tÃ© contrainte de reduire Ã  une seule table
 ce qui n'a pas d'incidence dans ce cas car elle ne 
-comporte pas beaucoup de duplication et qu'elle est normalisée.
+comporte pas beaucoup de duplication et qu'elle est normalisÃ©e.
 
 
 
